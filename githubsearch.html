@@ -10,27 +10,46 @@
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs/plugin/utc.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs/plugin/timezone.js"></script>
 
 </head>
 
 
 <body>
 
-    <a data-micromodal-trigger="modal-1" href='javascript:;'>Open Modal Dialog</a>
+ 
 
-    <div class="micromodal" id="modal-1" aria-hidden="true">
+     <div class="micromodal" id="modal-1" aria-hidden="true">
       <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
         <div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
           <button aria-label="Close modal" data-micromodal-close>X</button>
-          <p>hi there, I'm some modal content!</p>
+        
+
+          <form>
+            <label for="time-zone" >Change Timezone</label><br>
+            <select name="time-zone" id="time-zone" label="Pick a timezone">
+                <option value="Asia/Singapore">Asia/Singapore</option>
+                <option value="America/New_York">America/New_York</option>
+                <option value="Europe/Berlin">Europe/Berlin</option>
+          
+              </select>
+            <button id="change">Apply</button>
+          </form>
+
         </div>
       </div>
     </div>
+
+
     <div id="user-timezone">
         <h1>Set your timezone</h1>
-        <button data-micromodal-trigger="modal-1">ds</button>
+      
+       
 
     </div>
+    <button data-micromodal-trigger="modal-1"> <img src="img/edit-logo.png"></button>
     <div id="current-day">
         <h1></h1>
     </div>
