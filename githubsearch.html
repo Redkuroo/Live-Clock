@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <a data-micromodal-trigger="modal-1" href='javascript:;'>Open Modal Dialog</a>
+
+    <div class="micromodal" id="modal-1" aria-hidden="true">
+      <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <button aria-label="Close modal" data-micromodal-close>X</button>
+          <p>hi there, I'm some modal content!</p>
+        </div>
+      </div>
+    </div>
+    <div id="user-timezone">
+        <h1>Set your timezone</h1>
+        <button data-micromodal-trigger="modal-1">ds</button>
+
+    </div>
+    <div id="current-day">
+        <h1></h1>
+    </div>
+    <div id="current-time">
+        <h1>00:00:00</h1>
+    </div>
+    <div id="current-date">
+        <h1>00/00/00</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
