@@ -62,3 +62,23 @@ body{
     from { transform: translateY(15%); }
       to { transform: translateY(0); }
   }
+
+  .setter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  .setter button {
+    width: 3em;
+    height: 3em;
+    margin-left: 1em;
+    color: red;
+  }
+
+  .buttonz img{
+ 
+
+
+  }
