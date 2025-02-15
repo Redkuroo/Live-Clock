@@ -33,7 +33,7 @@ function changeTimezone() {
   const convertedTime = now.tz(selectedTimeZone).format("HH:mm:ss:A");
   const convertedDay = now.tz(selectedTimeZone).format("dddd")
   const convertedDate = now.tz(selectedTimeZone).format("MMM DD, YYYY")
- 
+
   document.querySelector("#current-time h1").textContent = convertedTime;//converts time
   document.querySelector("#current-day h1").textContent = convertedDay;//converts day
   document.querySelector("#current-date h1").textContent = convertedDate;//converts day
@@ -42,9 +42,9 @@ function changeTimezone() {
 }
 
 document.getElementById("change").addEventListener("click", function (event) {
-    
-    event.preventDefault()
- changeTimezone();
+
+  event.preventDefault()
+  changeTimezone();
 
 });
 

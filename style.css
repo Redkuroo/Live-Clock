@@ -1,83 +1,236 @@
-body{
-    zoom: 0.8;
-}
-#user-timezone, #current-time, #current-date, #current-day{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+body {
+  background-color: #fff;
+  zoom: 0.8;
+  font-family: "Quicksand", serif;
+  font-style: normal;
 }
 
+#user-timezone,
+#current-time,
+#current-date,
+#current-day,
+.setter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setter {
+  margin-bottom: 150px;
+}
+
+#current-day {
+  margin-bottom: -200px;
+}
+
+#current-date {
+  margin-top: -150px;
+}
 
 .micromodal {
-    display: none;
+  display: none;
+}
+
+.micromodal.is-open {
+  display: block;
+}
+
+.micromodal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.micromodal__container {
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-width: 800px;
+  max-height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+
+.micromodal[aria-hidden="false"] .micromodal__overlay {
+  animation: microModalFadeIn 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal[aria-hidden="false"] .micromodal__container {
+  animation: microModalSlideIn 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal .micromodal__container,
+.micromodal .micromodal__overlay {
+  will-change: transform;
+}
+
+@keyframes microModalFadeIn {
+  from {
+    opacity: 0;
   }
 
-  .micromodal.is-open {
-    display: block;
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes microModalSlideIn {
+  from {
+    transform: translateY(15%);
   }
 
-  .micromodal__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0,0,0,0.65);
+  to {
+    transform: translateY(0);
   }
+}
 
-  .micromodal__container {
-    box-sizing: border-box;
-    overflow-y: auto;
-    max-width: 500px;
-    max-height: 100vh;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 4px;
-  }
 
-  .micromodal[aria-hidden="false"] .micromodal__overlay {
-    animation: microModalFadeIn .2s cubic-bezier(0.0, 0.0, 0.2, 1);
-  }
 
-  .micromodal[aria-hidden="false"] .micromodal__container {
-    animation: microModalSlideIn .2s cubic-bezier(0, 0, .2, 1);
-  }
-
-  .micromodal .micromodal__container,
-  .micromodal .micromodal__overlay {
-    will-change: transform;
-  }
-
-  @keyframes microModalFadeIn {
-      from { opacity: 0; }
-        to { opacity: 1; }
-  }
-
-  @keyframes microModalSlideIn {
-    from { transform: translateY(15%); }
-      to { transform: translateY(0); }
-  }
-
-  .setter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-  }
-button{
+button {
   margin-left: 1px;
   cursor: pointer;
   background-color: transparent;
   border: none;
+
+
 }
-  .setter button img{
-   width: 5em;
-   height: 5em;
+button img:hover{
+ 
+  transform: translateY(-5px);
+}
+.setter button img {
+  width: 5em;
+  height: 5em;
+
+}
+
+.setter {
+  margin-left: 50px;
+}
+
+#current-time {
+  font-size: 100px;
+
+  font-family: "Kanit", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+
+#close-button {
+  float: right;
+
+
+  align-items: flex-start;
+
+
+  background-color: rgb(231, 92, 92);
+  border: 1px solid #aa1313;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#close-button:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
   }
+}
+
+#change {
 
 
 
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#change:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+
+
+#time-zone {
+  margin-top: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #000205;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+
+select option {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+
+select option:hover {
+  background-color: #007bff;
+  color: #fff;
+}
