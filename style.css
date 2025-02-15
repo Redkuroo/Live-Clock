@@ -6,7 +6,6 @@ body{
     justify-content: center;
     align-items: center;
 
-  
 }
 
 
@@ -69,16 +68,16 @@ body{
     align-items: center;
    
   }
-
-  .setter button {
-    width: 3em;
-    height: 3em;
-    margin-left: 1em;
-    color: red;
+button{
+  margin-left: 1px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+  .setter button img{
+   width: 5em;
+   height: 5em;
   }
 
-  .buttonz img{
- 
 
 
-  }

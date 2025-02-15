@@ -1,72 +1,82 @@
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs/plugin/utc.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs/plugin/timezone.js"></script>
+  </head>
 
-</head>
-
-
-<body>
-
-
-
+  <body>
     <div class="micromodal" id="modal-1" aria-hidden="true">
-        <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <button aria-label="Close modal" data-micromodal-close>X</button>
+      <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="micromodal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <button aria-label="Close modal" data-micromodal-close>X</button>
 
-
-                <form>
-                    <label for="time-zone">Change Timezone</label><br>
-                    <select name="time-zone" id="time-zone" label="Pick a timezone">
-                        <option value="Asia/Singapore">Asia/Singapore</option>
-                        <option value="America/New_York">America/New_York</option>
-                        <option value="Europe/Berlin">Europe/Berlin</option>
-
-                    </select>
-                    <button id="change">Apply</button>
-                </form>
-
-            </div>
+          <form>
+            <label for="time-zone">Change Timezone</label><br />
+            <select name="time-zone" id="time-zone">
+                <option value="Pacific/Midway">Pacific/Midway (UTC -11:00)</option>
+                <option value="Pacific/Honolulu">Pacific/Honolulu (UTC -10:00)</option>
+                <option value="America/Anchorage">America/Anchorage (UTC -09:00)</option>
+                <option value="America/Los_Angeles">America/Los_Angeles (UTC -08:00)</option>
+                <option value="America/Denver">America/Denver (UTC -07:00)</option>
+                <option value="America/Chicago">America/Chicago (UTC -06:00)</option>
+                <option value="America/New_York">America/New_York (UTC -05:00)</option>
+                <option value="America/Sao_Paulo">America/Sao_Paulo (UTC -03:00)</option>
+                <option value="Atlantic/Azores">Atlantic/Azores (UTC -01:00)</option>
+                <option value="Europe/London">Europe/London (UTC +00:00)</option>
+                <option value="Europe/Berlin">Europe/Berlin (UTC +01:00)</option>
+                <option value="Europe/Athens">Europe/Athens (UTC +02:00)</option>
+                <option value="Asia/Dubai">Asia/Dubai (UTC +04:00)</option>
+                <option value="Asia/Kolkata">Asia/Kolkata (UTC +05:30)</option>
+                <option value="Asia/Bangkok">Asia/Bangkok (UTC +07:00)</option>
+                <option value="Asia/Singapore">Asia/Singapore (UTC +08:00)</option>
+                <option value="Asia/Tokyo">Asia/Tokyo (UTC +09:00)</option>
+                <option value="Australia/Sydney">Australia/Sydney (UTC +10:00)</option>
+                <option value="Pacific/Auckland">Pacific/Auckland (UTC +12:00)</option>
+              </select>
+              
+            <button id="change">Apply</button>
+          </form>
         </div>
+      </div>
     </div>
 
     <div class="setter">
-        <div id="user-timezone">
-            <h1>Set your timezone</h1>
-        </div>
+      <div id="user-timezone">
+        <h1>Set your timezone</h1>
+      </div>
 
-        <button data-micromodal-trigger="modal-1" id="butt"> <img src="img/edit-logo.png"></button>
-
-
+      <button data-micromodal-trigger="modal-1" id="butt">
+        <img src="img/edit-logo.png" />
+      </button>
     </div>
-
 
     <div class="main">
-        <div id="current-day">
-            <h1></h1>
-        </div>
-        <div id="current-time">
-            <h1>00:00:00</h1>
-        </div>
-        <div id="current-date">
-            <h1>00/00/00</h1>
-        </div>
+      <div id="current-day">
+        <h1></h1>
+      </div>
+      <div id="current-time">
+        <h1>00:00:00</h1>
+      </div>
+      <div id="current-date">
+        <h1>00/00/00</h1>
+      </div>
     </div>
 
-
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
